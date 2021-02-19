@@ -10,7 +10,7 @@ function ListItems() {
   return (
     <div style={{ width: "100%" }}>
       <List component="nav" aria-label="main mailbox folders" className={classes.root}>
-        {todos.map((todo) => <Items todo={todo}/>)}
+        {todos.length > 0 ? todos.map((todo) => <Items todo={todo}/>) : null}
       </List>
     </div>
   )

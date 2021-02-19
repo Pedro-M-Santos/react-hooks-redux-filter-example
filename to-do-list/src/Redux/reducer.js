@@ -1,6 +1,6 @@
 import { ADD_TODO, DEL_TODO, UPDATE_TODO } from './actions'
-import { todos } from './states'
-export let reducer = (state = todos, action) => {
+// import { todos } from './states'
+export let reducer = (state = [], action) => {
     switch (action.type) {
         case ADD_TODO:
             return [...state, { id: (state.length + 1), name: action.payload.name }]
